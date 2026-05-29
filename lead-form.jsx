@@ -25,6 +25,8 @@ function enviarLead(data){
       }),
     }).catch(() => {});
   } catch (e) { /* nunca bloqueia o fluxo do usuário */ }
+  // evento de conversão do Meta Pixel (lead = simulação concluída)
+  try { if (window.fbq) window.fbq("track", "Lead"); } catch (e) {}
 }
 
 function maskPhone(v){
