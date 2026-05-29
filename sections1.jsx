@@ -196,8 +196,8 @@ const TESTIS = [
 ];
 function monogram(initials){
   const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'>`
-    + `<circle cx='48' cy='48' r='47' fill='%231a1e25' stroke='%230d9488' stroke-opacity='0.45'/>`
-    + `<text x='48' y='60' font-family='Georgia, serif' font-size='34' fill='%230d9488' text-anchor='middle'>${initials}</text>`
+    + `<circle cx='48' cy='48' r='47' fill='%231a1e25' stroke='%230e7490' stroke-opacity='0.45'/>`
+    + `<text x='48' y='60' font-family='Georgia, serif' font-size='34' fill='%230e7490' text-anchor='middle'>${initials}</text>`
     + `</svg>`;
   return "data:image/svg+xml," + svg.replace(/ /g, "%20").replace(/</g, "%3C").replace(/>/g, "%3E").replace(/#/g, "%23").replace(/"/g, "'");
 }
