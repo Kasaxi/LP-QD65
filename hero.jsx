@@ -51,8 +51,8 @@ function HeroBg({ bg, etherColor, patternVariant }){
     const v = patternVariant || "grid";
     return (
       <div className="hero-ether">
-        <div style={{position:"absolute", inset:0, background:"radial-gradient(85% 78% at 66% 26%, rgba(201,168,106,.14), transparent 70%)"}} />
-        {BGPattern && <BGPattern variant={v} mask="fade-edges" size={v==="dots"?22:46} fill="rgba(201,168,106,.2)" />}
+        <div style={{position:"absolute", inset:0, background:"radial-gradient(85% 78% at 66% 26%, rgba(13,148,136,.14), transparent 70%)"}} />
+        {BGPattern && <BGPattern variant={v} mask="fade-edges" size={v==="dots"?22:46} fill="rgba(13,148,136,.2)" />}
       </div>
     );
   }
@@ -60,7 +60,7 @@ function HeroBg({ bg, etherColor, patternVariant }){
     <div className="hero-ether">
       {EtherealShadow && (
         <EtherealShadow
-          color={etherColor || "rgba(208,193,156,1)"}
+          color={etherColor || "rgba(45,140,140,1)"}
           grain={0.07}
           blur={24}
         />

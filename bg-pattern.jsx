@@ -28,7 +28,7 @@ const _MASKS = {
   "none": "",
 };
 
-function BGPattern({ variant = "grid", mask = "none", size = 24, fill = "rgba(201,168,106,.25)", style, className }){
+function BGPattern({ variant = "grid", mask = "none", size = 24, fill = "rgba(13,148,136,.25)", style, className }){
   const m = _MASKS[mask] || "";
   const bgImage = _bgImage(variant, fill, size);
   const isCheck = variant === "checkerboard";

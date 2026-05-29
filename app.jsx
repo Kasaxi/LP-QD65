@@ -6,8 +6,8 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "patternVariant": "grid",
   "headline": "B",
   "urgency": true,
-  "accent": ["#c9a86a", "#b08f4f", "rgba(201,168,106,.14)"],
-  "ether": "#d0c19c"
+  "accent": ["#0d9488", "#0b7c72", "rgba(13,148,136,.16)"],
+  "ether": "#2d8c8c"
 }/*EDITMODE-END*/;
 
 function useReveal(dep){
@@ -68,12 +68,12 @@ function StickyCta(){
 }
 
 const ACCENTS = [
-  ["#c9a86a", "#b08f4f", "rgba(201,168,106,.14)"], // champanhe / dourado
-  ["#c98a5f", "#b06f43", "rgba(201,138,95,.14)"],  // bronze / cobre
-  ["#a8a07e", "#8a8260", "rgba(168,160,126,.16)"], // taupe / pedra
-  ["#9fb083", "#7f9263", "rgba(159,176,131,.16)"], // verde sálvia
+  ["#0d9488", "#0b7c72", "rgba(13,148,136,.16)"],  // azul-petróleo / teal
+  ["#2563eb", "#1d4ed8", "rgba(37,99,235,.16)"],   // azul confiança
+  ["#16a34a", "#15803d", "rgba(22,163,74,.16)"],   // verde conquista
+  ["#7c3aed", "#6d28d9", "rgba(124,58,237,.16)"],  // roxo / índigo
 ];
-const ETHERS = ["#d0c19c", "#cda85e", "#b6ad97", "#c79a6a"];
+const ETHERS = ["#2d8c8c", "#3b82f6", "#22a06b", "#64748b"];
 
 function App(){
   const { useTweaks, TweaksPanel, TweakSection, TweakRadio, TweakToggle, TweakColor, TweakSelect } = window;
