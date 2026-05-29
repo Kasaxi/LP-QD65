@@ -6,6 +6,27 @@ const { useState, useRef, useEffect } = React;
 
 const WA_DIGITS = "5561991731449"; // +55 61 99173-1449
 
+// Endpoint do Google Apps Script — grava cada lead numa planilha.
+const LEAD_ENDPOINT = "https://script.google.com/macros/s/AKfycbx7Af7ta7dfUoQK9vjKNhJb6DwWQnGZxkb9cTPz83l9mHLoLG0Ahz3JhSVqG1Mdg4OfUg/exec";
+
+function enviarLead(data){
+  try {
+    fetch(LEAD_ENDPOINT, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify({
+        nome: data.nome || "",
+        whatsapp: data.whatsapp || "",
+        renda: data.renda || "",
+        carteira: data.carteira || "",
+        nomeLimpo: data.nomeLimpo || "",
+        origem: "Landing Parque Alvorada I",
+      }),
+    }).catch(() => {});
+  } catch (e) { /* nunca bloqueia o fluxo do usuário */ }
+}
+
 function maskPhone(v){
   const d = v.replace(/\D/g, "").slice(0, 11);
   if (d.length <= 2) return d.length ? `(${d}` : d;
@@ -31,10 +52,20 @@ function LeadForm({ compact, onAnyChange }){
   const [err, setErr] = useState("");
   const [done, setDone] = useState(false);
   const inputRef = useRef(null);
+  const sentRef = useRef(false);
 
   useEffect(() => {
     if (inputRef.current) inputRef.current.focus();
   }, [i]);
+
+  // grava o lead na planilha assim que termina (uma única vez),
+  // independente de o usuário clicar no botão do WhatsApp depois.
+  useEffect(() => {
+    if (done && !sentRef.current){
+      sentRef.current = true;
+      enviarLead(data);
+    }
+  }, [done]);
 
   const step = STEPS[i];
   const total = STEPS.length;
