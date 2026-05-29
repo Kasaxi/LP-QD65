@@ -1,0 +1,13 @@
+# Fotos brutas e backups (não precisam ir pro deploy)
+uploads/
+backup-warm/
+
+# Estado do editor visual
+.thumbnail
+
+# Sistema operacional
+Thumbs.db
+.DS_Store
+
+# Dependências (caso adicione build no futuro)
+node_modules/
