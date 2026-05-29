@@ -11,9 +11,9 @@ function goForm(){
 window.goForm = goForm;
 
 const HEADLINES = {
-  A: <>Pare de pagar aluguel e conquiste seu apartamento próprio em Luziânia — <span className="hl">com R$0 de entrada.</span></>,
-  B: <>Sempre achou que não dava pra comprar? Aqui você sai do aluguel <span className="hl">sem tirar nada do bolso:</span> R$0 de entrada, R$0 de documentação.</>,
-  C: <>O apartamento que sua família merece, com a chave na sua mão <span className="hl">antes do que você imagina</span> — e a parcela cabendo no seu orçamento.</>,
+  A: <>Pare de pagar aluguel e tenha seu apartamento em Luziânia <span className="hl">sem dar entrada.</span></>,
+  B: <>Seu apartamento de 2 quartos em Luziânia começa <span className="hl">com R$0 de entrada e documentação grátis.</span></>,
+  C: <>A chave do seu apê na mão antes do que você imagina — <span className="hl">e a parcela cabendo no seu bolso.</span></>,
 };
 window.HEADLINES = HEADLINES;
 
